@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <assert.h>
+#include "xarray_inverter.h"
+#include "xparameters.h"
+
+// Define DATA_SIZE for testing
+#define DATA_SIZE 100
+
+// Test function to check if the array inversion works correctly
+void test_array_inversion() {
+    int in1[DATA_SIZE], out[DATA_SIZE], expected_out[DATA_SIZE];
+
+    // Initialize the input array with known values
+    for (int i = 0; i < DATA_SIZE; i++) {
+        in1[i] = i + 1;  // Example: in1 = [1, 2, 3, ..., 100]
+    }
+
+    // Expected output is the reverse of the input array
+    for (int i = 0; i < DATA_SIZE; i++) {
+        expected_out[i] = in1[DATA_SIZE - 1 - i];  // Expected out = [100, 99, ..., 1]
+    }
+
+    // Call your array inversion logic (this could be a software function or your IP)
+    array_inverter_sw(in1, out);  // `array_inverter_sw` should be your software version of the inversion
+
+    // Compare output to expected output
+    for (int i = 0; i < DATA_SIZE; i++) {
+        assert(out[i] == expected_out[i]);
+    }
+
+    printf("Test passed: Array inversion logic is correct.\n");
+}
+
+// Example software function that mimics the IP logic (can be replaced by real logic)
+void array_inverter_sw(int in1[DATA_SIZE], int out[DATA_SIZE]) {
+    for (int i = 0; i < DATA_SIZE; i++) {
+        out[i] = in1[DATA_SIZE - 1 - i];
+    }
+}
+
+int main() {
+    // Run unit test
+    test_array_inversion();
+
+    // If no assertion failed, print success message
+    printf("All tests passed!\n");
+
+    return 0;
+}

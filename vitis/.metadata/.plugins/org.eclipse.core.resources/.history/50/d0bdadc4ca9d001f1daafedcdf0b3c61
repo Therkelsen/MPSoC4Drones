@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xarray_inverter.h"
+#include "xparameters.h"
+#include "sleep.h"
+
+#define DATA_SIZE 100
+#define DATA_SIZE_BYTES (DATA_SIZE * sizeof(int))  // Number of bytes needed for DATA_SIZE elements
+
+XArray_inverter array_inverter;
+XArray_inverter_Config *configPtr;
+
+int main()
+{
+    init_platform();
+    print("Hello World\n\r");
+
+    // Initialize configuration pointer for the array_inverter IP
+    configPtr = XArray_inverter_LookupConfig(XPAR_EXAMPLE_0_DEVICE_ID);
+    int x_status = XArray_inverter_CfgInitialize(&array_inverter, configPtr);
+    if (x_status != XST_SUCCESS) {
+        print("IP initialization failed\n\r");
+        return XST_FAILURE;
+    }
+
+    // Define input data arrays
+    int in1[DATA_SIZE] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    int out[DATA_SIZE] = {0}; // Initialize output array
+
+    // Write data to 'in1' using the provided Byte Write functions
+    XArray_inverter_Write_in1_Bytes(&array_inverter, 0, (char*)in1, DATA_SIZE_BYTES);
+
+    // Start the IP core
+    XArray_inverter_Start(&array_inverter);
+
+    // Read back data from 'in1' using Byte Read function
+    XArray_inverter_Read_out_r_Bytes(&array_inverter, 0, (char*)out, DATA_SIZE_BYTES);
+
+    xil_printf("Base address of in1: 0x%x\n\r", XArray_inverter_Get_in1_BaseAddress(&array_inverter));
+    xil_printf("Base address of in1: 0x%x\n\r", XArray_inverter_Get_out_r_BaseAddress(&array_inverter));
+
+    // Display the values in 'out'
+    print("Output data:\n\r");
+    for (int i = 0; i < DATA_SIZE; i++) {
+        xil_printf("out[%d] = %d\n\r", i, out[i]);
+    }
+
+    print("Successfully ran Hello World application\n\r");
+    cleanup_platform();
+    return 0;
+}
