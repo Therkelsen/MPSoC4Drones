@@ -1,0 +1,12 @@
+
+{ 
+    crc :  19866170199865093  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto ce65f23df815487e8e5b7ccc76835504 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_bram_ctrl_v4_1_4 -L blk_mem_gen_v8_4_4 -L axi_lite_ipif_v3_0_4 -L axi_intc_v4_1_15 -L xlconstant_v1_1_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L smartconnect_v1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L axi_vip_v1_1_8 -L xlconcat_v2_1_4 -L zynq_ultra_ps_e_vip_v1_0_8 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot u96v2_sbc_mp4d_wrapper_behav xil_defaultlib.u96v2_sbc_mp4d_wrapper xil_defaultlib.glbl" , 
+    buildDate : "Nov 18 2020" , 
+    buildTime : "09:20:35" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/xsimk\"   \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_1.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_2.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_3.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_4.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_5.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_6.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_7.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_8.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_9.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_10.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_11.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_12.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_13.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_14.lnx64.o\" \"xsim.dir/u96v2_sbc_mp4d_wrapper_behav/obj/xsim_15.lnx64.o\" -L\"/tools/Xilinx/Vivado/2020.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

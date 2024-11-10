@@ -10,22 +10,27 @@
 .Xil
 vivado*.str
 
-/petalinux/
-/hdl/
 /bdf/
 /meta-avnet/
-/target/
+/petalinux/
 /PYNQ/
+/target/
 
-.git_setup
-.vivado_setup
-.petalinux_setup
-.vivado_built
-.petalinux_configured
-.petalinux_built
-.ubuntu_built
 .boot_packaged
+.git_setup
+.petalinux_built
+.petalinux_configured
+.petalinux_setup
 .rootfs_packaged
+.ubuntu_built
+.vivado_built
+.vivado_setup
+*/scripts/vivado*
+*/scripts/vitis_*_Makefile
+*.png
+*.xdbg
+*.dbg
+*.cache
 
 # Ignore build, temp, and output files
 **/build/
@@ -40,8 +45,6 @@ vivado*.str
 
 # Ignore Vivado and Vitis specific files
 *.runs/
-*.xpr
-*.xproj
 *.ip_user_files/
 *.vscode/
 *.wdb
@@ -92,3 +95,39 @@ vivado*.str
 *.user
 *.userosscache
 *.sln
+hdl/boards/uz7ev_evcc/base/uz7ev_evcc_factest.xdc
+hdl/boards/uz7ev_evcc/hdmi/hdmi.xdc
+hdl/boards/uz7ev_evcc/hdmi_v/hdmi.xdc
+hdl/boards/uz7ev_evcc/quadcam_h/fmc_quad.xdc
+hdl/boards/uz7ev_evcc/quadcam_h/hdmi.xdc
+hdl/boards/uz7ev_evcc/quadcam_h_v/fmc_quad.xdc
+hdl/boards/uz7ev_evcc/quadcam_h_v/hdmi.xdc
+hdl/boards/pz7030_fmc2/base/bitstream_compression_enable.xdc
+hdl/boards/pz7030_fmc2/base/pz7030_7015_revc_fmcv2_reva_v1.xdc
+hdl/boards/pz7030_fmc2/base/pz7030_fmc2_ali3_pmod.xdc
+hdl/boards/pz7030_fmc2/base/pz7030_fmc2_i2c.xdc
+hdl/boards/pz7030_fmc2/base/pz7030_fmc2_user_io.xdc
+hdl/boards/pz7020_fmc2/base/bitstream_compression_enable.xdc
+hdl/boards/pz7020_fmc2/base/pz7020_fmc2_ali3_pmod.xdc
+hdl/boards/pz7020_fmc2/base/pz7020_fmc2_hdmi.xdc
+hdl/boards/pz7020_fmc2/base/pz7020_fmc2_i2c.xdc
+hdl/boards/pz7020_fmc2/base/pz7020_fmc2_user_io.xdc
+hdl/boards/pz7020_fmc2/base/pz7020_revc_fmcv2_reva_v1.xdc
+hdl/boards/pz7015_fmc2/base/bitstream_compression_enable.xdc
+hdl/boards/pz7015_fmc2/base/pz7015_fmc2_ali3_pmod.xdc
+hdl/boards/pz7015_fmc2/base/pz7015_fmc2_i2c.xdc
+hdl/boards/pz7015_fmc2/base/pz7015_fmc2_user_io.xdc
+hdl/boards/pz7015_fmc2/base/pz7030_7015_revc_fmcv2_reva_v1.xdc
+hdl/boards/pz7010_fmc2/base/bitstream_compression_enable.xdc
+hdl/boards/pz7010_fmc2/base/pz7010_fmc2_i2c.xdc
+hdl/boards/pz7010_fmc2/base/pz7010_fmc2_user_io.xdc
+hdl/boards/pz7010_fmc2/base/pz7010_revc_fmcv2_reva_v1.xdc
+hdl/boards/mz7020_som/base/bitstream_compression_enable.xdc
+hdl/boards/mz7020_som/base/mz7020_som_base.xdc
+hdl/boards/mz7010_som/base/bitstream_compression_enable.xdc
+hdl/boards/mz7010_som/base/mz7010_som_base.xdc
+hdl/boards/minized_sbc/base/bitstream_compression_enable.xdc
+hdl/boards/minized_sbc/base/minized_leds.xdc
+hdl/boards/minized_sbc/base/minized_mic.xdc
+hdl/boards/minized_sbc/base/minized_pins.xdc
+hdl/boards/minized_sbc/base/minized_sbc_base.xdc
